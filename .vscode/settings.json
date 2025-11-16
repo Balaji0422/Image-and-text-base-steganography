@@ -1,0 +1,12 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-24",
+            "path": "C:\\Program Files\\Java\\jdk-24",
+            "default": true
+        }
+    ],
+    "java.format.settings.url": "",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.errors.incompleteClasspath.severity": "ignore"
+}

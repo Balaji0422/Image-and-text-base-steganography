@@ -1,0 +1,60 @@
+HideAndSeek
+   |----.vscode
+   |----out
+   |      |----//all class files stays here
+   |----resources
+   |      |----//all images stays here
+   |----README
+   |----src
+         |----database1
+         |      |----bin
+         |      |----lib
+         |      |----database
+         |            |----DBConnection.java
+         |            |----HideAndSeekForm.java
+         |----Encrypt_Decrypt
+         |      |----encrypt_drcrypt
+         |             |----SimpleSecureChatTabbed.java
+         |----lib
+         |---sample
+         |      |----libs
+         |      |----SimpleSecureChat.java
+         |----Steganography
+         |      |----SteganographyDecoder.java
+         |      |----SteganographyEncoder.java
+         |----UI
+         |     |----MainMenuUI.java
+         |     |----SteganographySwingUI.java
+         |     |----ChangePasswordForm.java
+         |----Sources
+         |     |----// project compiling and interpreting details 
+
+
+
+
+
+
+for Compiling code :-
+javac -cp "src/lib/mysql-connector-j-9.4.0.jar;src/lib/commons-collections4-4.4.jar;src/lib/commons-compress-1.21.jar;src/lib/commons-io-2.11.0.jar;src/lib/curvesapi-1.07;src/lib/pdfbox-app-2.0.35.jar;sample/libs/poi-5.2.3.jar;sample/libs/poi-ooxml-5.2.3.jar;src/lib/poi-ooxml-schemas-5.2.3.jar;src/lib/xmlbeans-5.1.1.jar" -d out src/database1/database/DBConnection.java src/database1/database/HideAndSeekForm.java src/UI/MainMenuUI.java src/UI/ChangePasswordForm.java src/sample/SimpleSecureChat.java src/UI/SteganographySwingUI.java src/Steganography/SteganographyEncoder.java src/Steganography/SteganographyDecoder.java
+
+
+
+for running code :-
+java -cp "out;src/lib/mysql-connector-j-9.4.0.jar" database.HideAndSeekForm
+
+
+
+for creating in MySQL 
+
+databasd name :-
+CREATE DATABASE IF NOT EXISTS hideandseekdb;
+USE hideandseekdb;
+
+table name with fields: -
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(64) NOT NULL
+);

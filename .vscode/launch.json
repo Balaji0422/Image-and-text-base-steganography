@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run TestDB",
+            "request": "launch",
+            "mainClass": "test.TestDB",
+            "classpath": [
+                "out",
+                "lib/mysql-connector-j-9.4.0.jar"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Run Registration_LoginPage",
+            "request": "launch",
+            "mainClass": "ui.Registration_LoginPage",
+            "classpath": [
+                "out",
+                "lib/mysql-connector-j-9.4.0.jar"
+            ]
+        }
+    ]
+}
